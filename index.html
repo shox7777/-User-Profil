@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="user hide-details" id="userBox">
+        <img src="./image.png" onclick="openinfo()">
+        <div class="info">
+            <h1>John Smith</h1>
+            <p>Working as a product manager at
+                <span> Microsoft Ins</span></p>
+            <p>From: California, United States</p>
+            <a href="#">Connect with me</a>
+        </div>
+        <div class="close-icon" onclinck="closeinfo()"></div>
+    </div>
+    <script>
+        let userBox = document.getElementById("userBox")
+
+        function openinfo() {
+            userBox.classList.remove("hide-details");
+        }
+
+        function closeinfo() {
+            userBox.classList.add("hide-details");
+        }
+    </script>
+</body>
+
+</html>
